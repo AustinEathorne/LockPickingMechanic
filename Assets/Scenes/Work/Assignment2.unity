@@ -810,7 +810,7 @@ Prefab:
       objectReference: {fileID: 441271433}
     - target: {fileID: 1675775001450268, guid: fb53d3d60ea2754488595936e6f70bf2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
         type: 2}
@@ -873,6 +873,51 @@ Prefab:
     - target: {fileID: 4216352490506682, guid: fb53d3d60ea2754488595936e6f70bf2, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: resetPosition.y
+      value: 0.3401
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: forcePosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: launchDirection.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: launchDirection.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: launchForce
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: pinRigidBody
+      value: 
+      objectReference: {fileID: 1161777143}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: resetEulerAngles.x
+      value: 183.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: launchDirection.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218333911124878, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: forcePosition.x
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb53d3d60ea2754488595936e6f70bf2, type: 2}
@@ -1645,6 +1690,26 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1113256915}
   m_CullTransparentMesh: 0
+--- !u!1 &1161777139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1516040574519202, guid: fb53d3d60ea2754488595936e6f70bf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 659321521}
+--- !u!54 &1161777143
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1161777139}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.01
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1266733240
 GameObject:
   m_ObjectHideFlags: 0

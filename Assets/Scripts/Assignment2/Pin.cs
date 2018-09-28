@@ -16,9 +16,29 @@ public class Pin : MonoBehaviour
 	[SerializeField]
 	private AudioSource aSource;
 
+    [SerializeField]
+    private Vector3 resetPosition;
+    [SerializeField]
+    private Vector3 resetEulerAngles;
+
+    private Quaternion resetRotation;
+
+    [SerializeField]
+    private Rigidbody pinRigidBody;
+    [SerializeField]
+    private Vector3 forcePosition;
+    [SerializeField]
+    private Vector3 launchDirection;
+    [SerializeField]
+    [Range(0, 500)]
+    private float launchForce;
+
+
+
 	public void Start()
 	{
 		aSource.clip = aClip;
+        this.resetRotation.eulerAngles = this.resetEulerAngles; 
 	}
 
 	public void SetPinAngle(float angle)
@@ -57,4 +77,19 @@ public class Pin : MonoBehaviour
 
 		//Debug.Log("Current angle: " + currentAngle.ToString());
 	}
+
+    public void LaunchPin()
+    { 
+        this.pinRigidBody.useGravity = true;
+        this.pinRigidBody.AddForceAtPosition(this.launchDirection * this.launchForce, this.forcePosition);
+    }
+
+    public void ResetPin()
+    {
+        this.pinRigidBody.useGravity = false;
+        this.pinRigidBody.velocity = Vector3.zero;
+        this.pinRigidBody.angularVelocity = Vector3.zero;
+        this.pinRigidBody.transform.localPosition = this.resetPosition;
+        this.pinRigidBody.transform.localRotation = this.resetRotation;
+    }
 }

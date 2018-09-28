@@ -176,8 +176,9 @@ public class LockManager : MonoBehaviour
 
 			this.canvasManager.endText.enabled = false;
 
-			// turn lockn off
-			this.gameLock.gameObject.SetActive(false);
+            // turn lockn off
+            this.gameLock.gamePin.ResetPin();
+            this.gameLock.gameObject.SetActive(false);
 
 			// turn difficulty select back on and time off
 			this.canvasManager.timeText.enabled = false;
@@ -228,7 +229,8 @@ public class LockManager : MonoBehaviour
 	{
 		playerInput.isInputEnabled = false;
 
-		// sfx
+        // TODO: launch pin
+        this.gameLock.gamePin.LaunchPin();
 
 		// dec count
 		this.numberOfPins--;
@@ -254,6 +256,8 @@ public class LockManager : MonoBehaviour
 				this.canvasManager.countdownText.text = Mathf.Floor(count).ToString();
 				yield return null;
 			}
+
+            this.gameLock.gamePin.ResetPin();
 
 			this.canvasManager.countdownText.enabled = false;
 			playerInput.isInputEnabled = true;
