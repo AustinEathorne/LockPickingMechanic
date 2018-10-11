@@ -57,4 +57,10 @@ public class LockCanvasManager : MonoBehaviour
     {
         this.howToPlayContainer.SetActive(_isActive);
     }
+
+    public void OnVolumeClick()
+    {
+        AudioManager.Instance.ToggleAudioMute();
+
+    }
 }
