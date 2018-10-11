@@ -53,6 +53,8 @@ public class Lock : MonoBehaviour
 
 	private bool isSqueaking = false;
 
+
+
 	private void Update()
 	{
 		// Constantly rotate the lock back to starting rotation
@@ -84,7 +86,8 @@ public class Lock : MonoBehaviour
 		}
 	}
 
-	public void SetSweetSpot(LockManager.Difficulty d)
+
+	public void SetupLock(LockManager.Difficulty d)
 	{
 		// get random point between pin's min and max angle (+ or - the range values to ensure the pickable range stays within pick movement range)
 		float ranAngle = Random.Range(gamePin.minAngle + sweetSpotRangeValues[(int)d], gamePin.maxAngle - sweetSpotRangeValues[(int)d]);
@@ -97,11 +100,11 @@ public class Lock : MonoBehaviour
 
 		Debug.Log("Sweet spot: " + currentSweetSpotMin.ToString() + ", " + currentSweetSpotMax.ToString());
 
-		// ..........reset pin angle >.<
+		// Reset pin angle
 		this.gamePin.SetPinAngle(0.0f);
 	}
 
-	// When the screwdriver pushes forwards
+
 	public void RotateLock()
 	{
 		// Find the pin's proximity to the sweet spot
@@ -206,5 +209,4 @@ public class Lock : MonoBehaviour
 		audioSource.loop = false;
 		audioSource.Play();
 	}
-
 }

@@ -62,24 +62,26 @@ public class LockManager : MonoBehaviour
 		this.playerInput = this.GetComponent<PlayerInput>();
 		this.playerInput.isInputEnabled = false;
 
-		// turn on lock
+		// Turn off lock
 		gameLock.gameObject.SetActive(false);
 
-		// update canvas
+		// Update canvas
 		this.UpdateCanvasGameText(playerData.GetExperience(), this.numberOfPins, "");
 
 		yield return null;
 	}
 
-	// Initialize game objects
 	private IEnumerator SetupGame()
 	{
-		gameLock.gameObject.SetActive(true);
-		this.canvasManager.timeText.enabled = true;
-		this.canvasManager.SetButtonsActive(false);
+        //turn off buttons and enable text
+        this.canvasManager.SetButtonsActive(false);
+        this.canvasManager.timeText.enabled = true;
 
-		// Set random sweet spot
-		gameLock.SetSweetSpot(this.gameDifficulty);
+        // Turn on lock
+        gameLock.gameObject.SetActive(true);
+
+		// Set up lock - set lock sweet spot, reset pin rotation
+		gameLock.SetupLock(this.gameDifficulty);
 
 		// set game parameters
 		this.gameTimeLimit = this.baseTimeLimits[(int)this.gameDifficulty] + ((int)playerData.GetPlayerSkillLevel() * 5.0f); // increase time by player skill level (0-2) multiplied by 5

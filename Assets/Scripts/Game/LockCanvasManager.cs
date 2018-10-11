@@ -5,14 +5,8 @@ using UnityEngine.UI;
 
 public class LockCanvasManager : MonoBehaviour 
 {
-
-	[SerializeField]
 	public Text timeText;
-
-	[SerializeField]
-	public Text countdownText; // public laziness
-
-	[SerializeField]
+	public Text countdownText;
 	public Text endText;
 
 	[SerializeField]
@@ -24,6 +18,9 @@ public class LockCanvasManager : MonoBehaviour
 	private Text pinsText;
 	[SerializeField]
 	private Text lockLevelText;
+
+    [SerializeField]
+    private GameObject howToPlayContainer;
 
 
 	public void SetTimeText(float currTime)
@@ -54,4 +51,10 @@ public class LockCanvasManager : MonoBehaviour
 	{
 		this.lockLevelText.text = level;
 	}
+
+
+    public void OnHowToPlayClick(bool _isActive)
+    {
+        this.howToPlayContainer.SetActive(_isActive);
+    }
 }
