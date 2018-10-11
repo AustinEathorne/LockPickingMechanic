@@ -33,6 +33,10 @@ public class Pin : MonoBehaviour
     [Range(0, 500)]
     private float launchForce;
 
+    [SerializeField]
+    private Transform pinAnchorPoint;
+
+    private bool isLaunching = false;
 
 
 	public void Start()
@@ -40,6 +44,14 @@ public class Pin : MonoBehaviour
 		aSource.clip = aClip;
         this.resetRotation.eulerAngles = this.resetEulerAngles; 
 	}
+
+    public void Update()
+    {
+        if (!this.isLaunching)
+        {
+            this.transform.position = this.pinAnchorPoint.transform.position;
+        }
+    }
 
 	public void SetPinAngle(float angle)
 	{
@@ -79,7 +91,8 @@ public class Pin : MonoBehaviour
 	}
 
     public void LaunchPin()
-    { 
+    {
+        this.isLaunching = true;
         this.pinRigidBody.useGravity = true;
         this.pinRigidBody.AddForceAtPosition(this.launchDirection * this.launchForce, this.forcePosition);
     }
@@ -91,5 +104,6 @@ public class Pin : MonoBehaviour
         this.pinRigidBody.angularVelocity = Vector3.zero;
         this.pinRigidBody.transform.localPosition = this.resetPosition;
         this.pinRigidBody.transform.localRotation = this.resetRotation;
+        this.isLaunching = false;
     }
 }
