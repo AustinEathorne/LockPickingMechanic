@@ -640,8 +640,8 @@ MonoBehaviour:
   - 30
   gameLock: {fileID: 781362619}
   canvasManager: {fileID: 1047059018}
-  skillIncrease: 10
-  bonusPinTime: 10
+  skillIncrease: 5
+  bonusPinTime: 5
   winnerTextList:
   - HOH YEAH
   - WINNER/GAGNON
@@ -1004,6 +1004,36 @@ Prefab:
         type: 2}
       propertyPath: forcePosition.x
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: sweetSpotRangeValues.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: sweetSpotRangeValues.Array.data[1]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: sweetSpotRangeValues.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: proximityRanges.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: proximityRanges.Array.data[1]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222367682049154, guid: fb53d3d60ea2754488595936e6f70bf2,
+        type: 2}
+      propertyPath: proximityRanges.Array.data[2]
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb53d3d60ea2754488595936e6f70bf2, type: 2}
@@ -1626,22 +1656,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-USE A & D KEYS TO TURN YOUR BOBBY PIN LEFT AND RIGHT
+  m_Text: '-USE A & D KEYS TO ROTATE YOUR BOBBY PIN LEFT AND RIGHT.
 
 
-    -USE W KEY TO FORCE THE LOCK
+    -USE W KEY TO FORCE THE LOCK.
 
 
     -GAIN SKILL POINTS WITH EVERY SUCCESSFUL LOCK PICK. THE HIGHER YOUR SKILL LEVEL,
-    THE LARGER THE SWEET SPOT................
+    THE MORE TIME YOU HAVE TO PICK LOCKS.
 
 
-    -LIMITED AMOUNT OF BOBBY PINS. GAIN A PICK EVERY TIME YOU COMPLETE A LOCK IN UNDER
-    X SECONDS. LOSE ALL YOUR PICKS AND IT''S GAME OVER
+    -LIMITED AMOUNT OF BOBBY PINS. GAIN A PIN EVERY TIME YOU COMPLETE A LOCK IN UNDER
+    5 SECONDS. LOSE ALL YOUR PICKS AND IT''S GAME OVER.
 
 
     -DIFFICULTY AFFECTS THE AMOUNT OF TIME TO COMPLETE EACH LOCK AND THE SIZE OF THE
-    SWEET SPOT'
+    SWEET SPOT.'
 --- !u!222 &997443485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3013,7 +3043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 270}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: -200, y: -860}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765536289
@@ -3049,7 +3079,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Maneuver your Bobby Pin back and forth and attempt to force the lock with
-    your scredriver! Be careful not to break your bobby pins by applying too much
+    your screwdriver! Be careful not to break your bobby pins by applying too much
     pressure!! Level Up your skills and unlock them all!!!
 --- !u!222 &1765536290
 CanvasRenderer:

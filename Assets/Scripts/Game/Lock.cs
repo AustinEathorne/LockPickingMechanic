@@ -87,16 +87,16 @@ public class Lock : MonoBehaviour
 	}
 
 
-	public void SetupLock(LockManager.Difficulty d)
+	public void SetupLock(LockManager.Difficulty _diff)
 	{
 		// get random point between pin's min and max angle (+ or - the range values to ensure the pickable range stays within pick movement range)
-		float ranAngle = Random.Range(gamePin.minAngle + sweetSpotRangeValues[(int)d], gamePin.maxAngle - sweetSpotRangeValues[(int)d]);
+		float ranAngle = Random.Range(gamePin.minAngle + sweetSpotRangeValues[(int)_diff], gamePin.maxAngle - sweetSpotRangeValues[(int)_diff]);
 
 		// Debug.Log("Ran Angle: " + ranAngle.ToString());
 
 		// set our min & max for the sweet spot
-		currentSweetSpotMin = ranAngle - sweetSpotRangeValues[(int)d];
-		currentSweetSpotMax = ranAngle + sweetSpotRangeValues[(int)d];
+		currentSweetSpotMin = ranAngle - sweetSpotRangeValues[(int)_diff];
+		currentSweetSpotMax = ranAngle + sweetSpotRangeValues[(int)_diff];
 
 		Debug.Log("Sweet spot: " + currentSweetSpotMin.ToString() + ", " + currentSweetSpotMax.ToString());
 
@@ -121,6 +121,8 @@ public class Lock : MonoBehaviour
 		{
 			distance = 0.0f;
 		}
+
+        //Debug.Log("Distance: " + distance.ToString());
 
 		// check how far we can rotate based off the pin's proximity to the sweet spot
 		float absoluteValue = Mathf.Abs(distance);
