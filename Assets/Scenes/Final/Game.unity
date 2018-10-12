@@ -1479,11 +1479,11 @@ MonoBehaviour:
 
 
     -LIMITED AMOUNT OF BOBBY PINS. GAIN A PIN EVERY TIME YOU COMPLETE A LOCK IN UNDER
-    5 SECONDS. LOSE ALL YOUR PICKS AND IT''S GAME OVER.
+    5 SECONDS. LOSE ALL YOUR PICKS AND YOUR STATS RESET.
 
 
     -DIFFICULTY AFFECTS THE AMOUNT OF TIME TO COMPLETE EACH LOCK AND THE SIZE OF THE
-    SWEET SPOT.'
+    SWEET SPOT'
 --- !u!222 &997443485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1551963769}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2775,9 +2775,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Maneuver your bobby pin back and forth and attempt to force the lock with
-    your screwdriver! Be careful not to break your bobby pins by applying too much
-    pressure!! Level up your skills and become a master lock picker!!!
+  m_Text: Maneuver your bobby pin back and forth to find the sweet spot. Attempt to
+    open the lock by turning it with your screwdriver! Be careful not to break your
+    bobby pins by applying too much pressure!! Level up your skills and become a master
+    lock picker!!!
 --- !u!222 &1765536290
 CanvasRenderer:
   m_ObjectHideFlags: 0
