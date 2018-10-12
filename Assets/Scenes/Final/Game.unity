@@ -2777,7 +2777,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Maneuver your bobby pin back and forth and attempt to force the lock with
     your screwdriver! Be careful not to break your bobby pins by applying too much
-    pressure!! Level up your skills and become a master lockpicker!!!
+    pressure!! Level up your skills and become a master lock picker!!!
 --- !u!222 &1765536290
 CanvasRenderer:
   m_ObjectHideFlags: 0
