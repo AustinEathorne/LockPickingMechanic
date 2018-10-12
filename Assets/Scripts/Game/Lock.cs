@@ -98,7 +98,7 @@ public class Lock : MonoBehaviour
 		currentSweetSpotMin = ranAngle - sweetSpotRangeValues[(int)_diff];
 		currentSweetSpotMax = ranAngle + sweetSpotRangeValues[(int)_diff];
 
-		Debug.Log("Sweet spot: " + currentSweetSpotMin.ToString() + ", " + currentSweetSpotMax.ToString());
+		//Debug.Log("Sweet spot: " + currentSweetSpotMin.ToString() + ", " + currentSweetSpotMax.ToString());
 
 		// Reset pin angle
 		this.gamePin.SetPinAngle(0.0f);
